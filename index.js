@@ -7,7 +7,7 @@
 
 
  
-const StudentName = ['ankit', 'amit', 'sumit', 'rohit']
+// const StudentName = ['ankit', 'amit', 'sumit', 'rohit']
 
 function findstudent (allStudent, studentName) {
      for(let i= 0; i < allStudent.length; i++) {
@@ -157,7 +157,7 @@ function capitilize(str) {
     }
     return str[0].toUpperCase() + str.slice(1)
 }
-console.log(capitilize("jordan"));
+// console.log(capitilize("jordan"));
 
 
  //-------------------------------------------------------------------------
@@ -215,30 +215,37 @@ const prices = [7, 1, 5, 3, 6, 4];
  //-------------------------------------------------------------------------
 
  //  8 =>  chunk 
-
- 
- function chunkArray(array, chunkSize) {
-    const chunks = []; // Step 1: Create an empty array to hold the chunks
-    let index = 0; // Step 2: Set a starting index
-
-    // Step 3: Loop through the original array as long as the index hasn't reached the end
-    while (index < array.length) {
-        // Step 4: Extract a chunk of the desired size
+  
+function chunkArray(array, chunkSize){
+    const chunks = [];
+    let index = 0;
+   
+    while(index < array.length) {
         const chunk = array.slice(index, index + chunkSize);
-
-        // Step 5: Add the extracted chunk to the `chunks` array
         chunks.push(chunk);
-
-        // Step 6: Move the index forward by the chunk size
         index += chunkSize;
-    }
 
-    // Step 7: Return the final array of chunks
-    return chunks;
+
+    }
+    
+return chunks;
+
 }
 
-// Example usage:
-const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const size = 4;
-console.log(chunkArray(arr, size)); 
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const size = 3
+
+// console.log(chunkArray(arr, size));
+
+
+
+ //-------------------------------------------------------------------------
+
+ //  8 =>  chunk 
+
+
+
+
+
+
  
