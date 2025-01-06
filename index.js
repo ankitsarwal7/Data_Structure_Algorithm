@@ -338,3 +338,6 @@ linkedList.push(30);
 linkedList.printList();
 
  
+//-------------------------------------------------------------------------
+
+ //  11 =>  LinkedList push method
