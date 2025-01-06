@@ -416,16 +416,34 @@ class LinkedList {
     return temp
 }
  
+// unshift 
+// unshift method allows to add item or any node at the beginning of list or string 
+
+unshift(value) {
+    const newNode = new Node(value)
+    if(!this.head){
+        this.head = newNode
+        this.tail = newNode
+    }
+   
+    newNode.next = this.head
+    this.head = newNode
+
+    this.length++
+    return this;
+
+}
+  
+
 
 
 } 
 
 const myLinkedList = new LinkedList(1)
-console.log(myLinkedList);
-// myLinkedList.push(10)
-// myLinkedList.push(20)
-myLinkedList.pop()
-console.log(myLinkedList);
+// console.log(myLinkedList);
+myLinkedList.push(10)
+myLinkedList.unshift(0)
+ console.log(myLinkedList);
  
 
 
