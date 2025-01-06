@@ -420,7 +420,9 @@ class LinkedList {
 // unshift method allows to add item or any node at the beginning of list or string 
 
 unshift(value) {
+
     const newNode = new Node(value)
+
     if(!this.head){
         this.head = newNode
         this.tail = newNode
@@ -433,7 +435,35 @@ unshift(value) {
     return this;
 
 }
-  
+  //shift method
+  //shift method allows to delete first item or node from the list 
+  // after removing the node  shift the head to the next
+
+shift(){
+   if (!this.head) {
+    return undefined
+   }
+
+   let temp = this.head
+   this.head = this.head.next
+
+    temp.next = null
+    this.length--
+
+    if (this.length===0) {
+        this.tail = null
+    }
+    
+    return temp;
+
+}
+
+//getFirst method
+// getFirst method is used to find first item
+
+getFirst(){
+    return this.head
+}
 
 
 
@@ -441,9 +471,10 @@ unshift(value) {
 
 const myLinkedList = new LinkedList(1)
 // console.log(myLinkedList);
-myLinkedList.push(10)
-myLinkedList.unshift(0)
- console.log(myLinkedList);
+myLinkedList.push(2)
+// myLinkedList.unshift(0)
+// myLinkedList.shift()
+console.log(myLinkedList.getFirst());
  
 
 
