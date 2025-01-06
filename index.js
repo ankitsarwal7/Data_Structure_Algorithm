@@ -465,16 +465,33 @@ getFirst(){
     return this.head
 }
 
+//getLast method
+//
+
+getLast(){
+    if (!this.head) {
+        return null
+    }
+    let temp = this.head
+
+    while(temp) {
+        if (!temp.next) {
+            return temp
+        }
+        temp = temp.next
+    }
+}
+
 
 
 } 
 
 const myLinkedList = new LinkedList(1)
 // console.log(myLinkedList);
-myLinkedList.push(2)
+myLinkedList.push(20)
 // myLinkedList.unshift(0)
 // myLinkedList.shift()
-console.log(myLinkedList.getFirst());
+console.log(myLinkedList.getLast());
  
 
 
