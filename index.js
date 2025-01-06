@@ -277,67 +277,106 @@ const size = 3
     
 //-------------------------------------------------------------------------
 
+
+
+
+
+
+//.......................SINGLE ----- LINKEDLIST..................... 
+
+
+
+
+
+
+
  //  10 =>  LinkedList push method
+ 
+// // Node class to represent each node in the linked list
+// class Node {
+//     constructor(data) {
+//         this.data = data; // The value stored in the node
+//         this.next = null; // Pointer to the next node (initially null)
+//     }
+// }
 
+// // LinkedList class to manage the list
+// class LinkedList {
+//     constructor() {
+//         this.head = null; // The head (start) of the list, initially null
+//     }
 
+//     // Push method to add a new node at the end of the list
+//     push(data) {
+//         const newNode = new Node(data); // Create a new node with the given data
 
+//         if (this.head === null) {
+//             // If the list is empty, the new node becomes the head
+//             this.head = newNode;
+//             return;
+//         }
 
-// Node class to represent each node in the linked list
-class Node {
-    constructor(data) {
-        this.data = data; // The value stored in the node
-        this.next = null; // Pointer to the next node (initially null)
-    }
-}
+//         // Otherwise, traverse to the end of the list
+//         let current = this.head;
+//         while (current.next !== null) {
+//             current = current.next; // Move to the next node
+//         }
 
-// LinkedList class to manage the list
-class LinkedList {
-    constructor() {
-        this.head = null; // The head (start) of the list, initially null
-    }
+//         // Add the new node at the end of the list
+//         current.next = newNode;
+//     }
 
-    // Push method to add a new node at the end of the list
-    push(data) {
-        const newNode = new Node(data); // Create a new node with the given data
+//     // Helper method to print the linked list
+//     printList() {
+//         let current = this.head;
+//         while (current !== null) {
+//             // console.log(current.data);
+//             current = current.next; // Move to the next node
+//         }
+//     }
+// }
 
-        if (this.head === null) {
-            // If the list is empty, the new node becomes the head
-            this.head = newNode;
-            return;
-        }
+// // Example usage
+// const linkedList = new LinkedList();
 
-        // Otherwise, traverse to the end of the list
-        let current = this.head;
-        while (current.next !== null) {
-            current = current.next; // Move to the next node
-        }
+// // Add nodes to the list using push
+// linkedList.push(10);
+// linkedList.push(20);
+// linkedList.push(30);
 
-        // Add the new node at the end of the list
-        current.next = newNode;
-    }
-
-    // Helper method to print the linked list
-    printList() {
-        let current = this.head;
-        while (current !== null) {
-            console.log(current.data);
-            current = current.next; // Move to the next node
-        }
-    }
-}
-
-// Example usage
-const linkedList = new LinkedList();
-
-// Add nodes to the list using push
-linkedList.push(10);
-linkedList.push(20);
-linkedList.push(30);
-
-// Print the linked list
-linkedList.printList();
+// // Print the linked list
+// linkedList.printList();
 
  
 //-------------------------------------------------------------------------
 
- //  11 =>  LinkedList push method
+ //  11 =>  LinkedList ALL OPERATION  method
+
+// created a node
+class Node {
+     constructor (value) {
+        this.head = value 
+        this.next = null
+    }
+}
+
+class LinkedList {
+    constructor(value){
+        this.head = new Node(value)
+        this.tail = this.head
+        this.length = 1
+    }
+}
+
+const myLinkedList = new LinkedList(1)
+console.log(myLinkedList);
+ 
+ 
+
+
+
+
+
+
+
+
