@@ -503,6 +503,20 @@ get(index){
     return null
 }
 
+// set method 
+// set method is update the item 
+
+set(index, value){
+    let temp = this.get(index)
+
+    if(temp){
+        temp.value = value
+        return true;
+    }
+    return false
+}
+
+
 
 
 
@@ -515,10 +529,12 @@ const myLinkedList = new LinkedList(0)
 myLinkedList.push(1)
 myLinkedList.push(2)
 myLinkedList.push(3)
-// myLinkedList.unshift(0)
+ // myLinkedList.unshift(0)
 // myLinkedList.shift()
 // console.log(myLinkedList.getLast());
-console.log(myLinkedList.get(3));
+console.log(myLinkedList.set(3, 10));
+console.log(myLinkedList);
+
 
  
 
