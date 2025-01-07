@@ -466,7 +466,7 @@ getFirst(){
 }
 
 //getLast method
-//
+//get last method deleting the last node 
 
 getLast(){
     if (!this.head) {
@@ -482,16 +482,44 @@ getLast(){
     }
 }
 
+// get method
+//in this method chekcing the node on behalf of the index
+
+get(index){
+ 
+
+    let counter = 0
+    let temp = this.head
+
+    while(temp){
+        if (counter === index) {
+            return temp;
+        }
+
+        counter++
+        temp = temp.next
+
+    }
+    return null
+}
+
+
+
+
 
 
 } 
 
-const myLinkedList = new LinkedList(1)
+const myLinkedList = new LinkedList(0)
 // console.log(myLinkedList);
-myLinkedList.push(20)
+myLinkedList.push(1)
+myLinkedList.push(2)
+myLinkedList.push(3)
 // myLinkedList.unshift(0)
 // myLinkedList.shift()
-console.log(myLinkedList.getLast());
+// console.log(myLinkedList.getLast());
+console.log(myLinkedList.get(3));
+
  
 
 
